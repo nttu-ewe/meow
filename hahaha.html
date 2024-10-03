@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <title>個人履歷</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 80%;
+            max-width: 900px;
+            margin: 50px auto;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        header {
+            text-align: center;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #e0e0e0;
+        }
+
+        header img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        header h1 {
+            margin: 20px 0 10px 0;
+            font-size: 2.5em;
+            color: #333;
+        }
+
+        header p {
+            font-size: 1.1em;
+            color: #777;
+        }
+
+        section {
+            margin-top: 30px;
+        }
+
+        section h2 {
+            color: #333;
+            border-bottom: 2px solid #e0e0e0;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        table th, table td {
+            text-align: left;
+            padding: 10px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        table th {
+            background-color: #f9f9f9;
+            width: 20%;
+        }
+
+        .skills, .projects, .awards {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .skills li, .projects li, .awards li {
+            background-color: #f9f9f9;
+            margin-bottom: 10px;
+            padding: 10px;
+            border-radius: 4px;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .contact-info div {
+            width: 50%;
+            margin-bottom: 10px;
+        }
+
+        .contact-info i {
+            margin-right: 8px;
+            color: #555;
+        }
+
+        /* 響應式設計 */
+        @media (max-width: 600px) {
+            .contact-info div {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <!-- 使用占位圖像，請替換為您的照片 -->
+            <img src="https://via.placeholder.com/150" alt="個人照片">
+            <h1>張三</h1>
+            <p>一位熱愛科技與設計的全端工程師</p>
+        </header>
+
+        <section>
+            <h2>簡歷</h2>
+            <p>擁有五年軟體開發經驗，專精於前端與後端技術，具備良好的團隊合作精神與問題解決能力。</p>
+        </section>
+
+        <section>
+            <h2>學歷</h2>
+            <table>
+                <tr>
+                    <th>時間</th>
+                    <td>2014 - 2018</td>
+                </tr>
+                <tr>
+                    <th>學校</th>
+                    <td>國立臺灣大學</td>
+                </tr>
+                <tr>
+                    <th>學位</th>
+                    <td>資訊工程學士</td>
+                </tr>
+            </table>
+        </section>
+
+        <section>
+            <h2>經歷</h2>
+            <table>
+                <tr>
+                    <th>時間</th>
+                    <td>2018 - 至今</td>
+                </tr>
+                <tr>
+                    <th>公司</th>
+                    <td>ABC科技有限公司</td>
+                </tr>
+                <tr>
+                    <th>職位</th>
+                    <td>全端工程師</td>
+                </tr>
+            </table>
+        </section>
+
+        <section>
+            <h2>專業能力</h2>
+            <ul class="skills">
+                <li>HTML/CSS/JavaScript</li>
+                <li>React.js / Node.js</li>
+                <li>Python / Django</li>
+                <li>資料庫管理 (MySQL, MongoDB)</li>
+                <li>Git 版本控制</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>參與專案 / 活動 / 作品</h2>
+            <ul class="projects">
+                <li><strong>個人網站</strong> - 使用React和Node.js開發的個人作品展示網站。</li>
+                <li><strong>電商平台</strong> - 參與開發一個完整的電商解決方案，包括前後端設計。</li>
+                <li><strong>開源貢獻</strong> - 為多個開源專案貢獻代碼，提升專案功能與效能。</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>榮譽 / 獎項</h2>
+            <ul class="awards">
+                <li>2020 年度最佳員工 - ABC科技有限公司</li>
+                <li>國立臺灣大學資訊競賽 一等獎</li>
+                <li>Google 開發者挑戰賽 優勝獎</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>聯絡方式</h2>
+            <div class="contact-info">
+                <div><i class="fas fa-envelope"></i> email@example.com</div>
+                <div><i class="fas fa-phone"></i> 0987-654-321</div>
+                <div><i class="fas fa-map-marker-alt"></i> 台北市中山區</div>
+                <div><i class="fas fa-linkedin"></i> linkedin.com/in/username</div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Font Awesome 圖示庫 -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</body>
+</html>
