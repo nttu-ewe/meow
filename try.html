@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>張三的個人履歷</title>
+    
+    <!-- 引入Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Pacifico&display=swap" rel="stylesheet">
+
+    <style>
+        /* 基本樣式 */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', sans-serif;
+            background-color: #f0f8ff;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        /* Header 區塊 */
+        header {
+            text-align: center;
+            padding: 50px 0;
+            background: linear-gradient(135deg, #add8e6, #87ceeb);
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        header::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -50%;
+            width: 200%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.1);
+            transform: skewX(-45deg);
+            animation: slide 5s linear infinite;
+        }
+
+        @keyframes slide {
+            0% { left: -50%; }
+            100% { left: 50%; }
+        }
+
+        header img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 5px solid white;
+            object-fit: cover;
+            margin-bottom: 20px;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+
+        header h1 {
+            font-family: 'Pacifico', cursive;
+            font-size: 3em;
+            margin: 10px 0;
+            animation: fadeInDown 1s ease-out;
+        }
+
+        header p {
+            font-size: 1.2em;
+            margin-top: 10px;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Section 樣式 */
+        section {
+            margin: 40px 0;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeIn 1s forwards;
+        }
+
+        section:nth-child(even) {
+            animation-delay: 0.5s;
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        section h2 {
+            color: #1e90ff;
+            border-bottom: 2px solid #add8e6;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        section h2::after {
+            content: '';
+            position: absolute;
+            width: 50px;
+            height: 3px;
+            background-color: #1e90ff;
+            bottom: 0;
+            left: 0;
+        }
+
+        /* 表格樣式 */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        table th, table td {
+            text-align: left;
+            padding: 12px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        table th {
+            width: 20%;
+            background-color: #f0f8ff;
+            color: #1e90ff;
+            font-weight: bold;
+        }
+
+        /* 列表樣式 */
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        ul li {
+            background-color: #f0f8ff;
+            margin-bottom: 10px;
+            padding: 10px;
+            border-left: 4px solid #1e90ff;
+            transition: transform 0.3s, background-color 0.3s;
+        }
+
+        ul li:hover {
+            transform: translateX(10px);
+            background-color: #e0f0ff;
+        }
+
+        /* 聯絡方式樣式 */
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .contact-info div {
+            flex: 1 1 45%;
+            margin: 10px 0;
+        }
+
+        .contact-info a {
+            color: #1e90ff;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .contact-info a:hover {
+            color: #104e8b;
+        }
+
+        /* 響應式設計 */
+        @media (max-width: 768px) {
+            header {
+                padding: 30px 0;
+            }
+
+            header h1 {
+                font-size: 2.5em;
+            }
+
+            section h2 {
+                font-size: 1.5em;
+            }
+
+            table th, table td {
+                padding: 8px;
+            }
+
+            ul li {
+                padding: 8px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .contact-info div {
+                flex: 1 1 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header 區塊 -->
+        <header>
+            <!-- 使用占位圖像，請替換為您的照片 -->
+            <img src="https://via.placeholder.com/150" alt="個人照片">
+            <h1>張三</h1>
+            <p>全端工程師 | 熱愛科技與設計</p>
+        </header>
+
+        <!-- 簡歷 -->
+        <section>
+            <h2>簡歷</h2>
+            <p>擁有五年軟體開發經驗，專精於前端與後端技術，具備良好的團隊合作精神與問題解決能力。熱衷於學習新技術，並能快速適應不同的工作環境。</p>
+        </section>
+
+        <!-- 學歷 -->
+        <section>
+            <h2>學歷</h2>
+            <table>
+                <tr>
+                    <th>時間</th>
+                    <td>2014 - 2018</td>
+                </tr>
+                <tr>
+                    <th>學校</th>
+                    <td>國立臺灣大學</td>
+                </tr>
+                <tr>
+                    <th>學位</th>
+                    <td>資訊工程學士</td>
+                </tr>
+            </table>
+        </section>
+
+        <!-- 經歷 -->
+        <section>
+            <h2>經歷</h2>
+            <table>
+                <tr>
+                    <th>時間</th>
+                    <td>2018 - 至今</td>
+                </tr>
+                <tr>
+                    <th>公司</th>
+                    <td>ABC科技有限公司</td>
+                </tr>
+                <tr>
+                    <th>職位</th>
+                    <td>全端工程師</td>
+                </tr>
+            </table>
+        </section>
+
+        <!-- 專業能力 -->
+        <section>
+            <h2>專業能力</h2>
+            <ul>
+                <li>HTML5, CSS3, JavaScript</li>
+                <li>React.js, Node.js</li>
+                <li>Python, Django</li>
+                <li>資料庫管理 (MySQL, MongoDB)</li>
+                <li>Git 版本控制</li>
+                <li>敏捷開發與團隊協作</li>
+            </ul>
+        </section>
+
+        <!-- 參與專案 / 活動 / 作品 -->
+        <section>
+            <h2>參與專案 / 活動 / 作品</h2>
+            <ul>
+                <li><strong>個人網站</strong> - 使用React和Node.js開發的個人作品展示網站，具備響應式設計和動態內容更新。</li>
+                <li><strong>電商平台</strong> - 參與開發一個完整的電商解決方案，包括前後端設計、支付整合及用戶體驗優化。</li>
+                <li><strong>開源貢獻</strong> - 為多個開源專案貢獻代碼，提升專案功能與效能，並積極參與社群討論。</li>
+                <li><strong>技術部落格</strong> - 撰寫技術文章，分享開發經驗與學習心得，累積超過1000名訂閱者。</li>
+            </ul>
+        </section>
+
+        <!-- 榮譽 / 獎項 -->
+        <section>
+            <h2>榮譽 / 獎項</h2>
+            <ul>
+                <li>2020 年度最佳員工 - ABC科技有限公司</li>
+                <li>國立臺灣大學資訊競賽 一等獎</li>
+                <li>Google 開發者挑戰賽 優勝獎</li>
+                <li>Microsoft Imagine Cup 亞軍</li>
+            </ul>
+        </section>
+
+        <!-- 聯絡方式 -->
+        <section>
+            <h2>聯絡方式</h2>
+            <div class="contact-info">
+                <div><strong>Email:</strong> <a href="mailto:email@example.com">email@example.com</a></div>
+                <div><strong>電話:</strong> 0987-654-321</div>
+                <div><strong>地址:</strong> 台北市中山區</div>
+                <div><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/username" target="_blank">linkedin.com/in/username</a></div>
+                <div><strong>GitHub:</strong> <a href="https://github.com/username" target="_blank">github.com/username</a></div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
