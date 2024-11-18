@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>有馬佳奈 - 專屬網頁</title>
+    <style>
+        /* 全局樣式 */
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            color: #333;
+            background: linear-gradient(180deg, #ffe4e1, #fff);
+            overflow-x: hidden;
+        }
+
+        /* 背景設計 */
+        .background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+
+        .background::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://i.imgur.com/5fn5lOZ.png') no-repeat center center;
+            background-size: cover;
+            opacity: 0.1;
+        }
+
+        /* 頭部區域 */
+        .hero {
+            text-align: center;
+            padding: 80px 20px;
+            background: rgba(255, 228, 225, 0.8);
+            border-bottom: 2px solid #ffc0cb;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .hero h1 {
+            font-size: 3em;
+            color: #ff69b4;
+            text-shadow: 0 0 10px #ffc0cb;
+        }
+
+        .hero p {
+            font-size: 1.5em;
+            color: #666;
+        }
+
+        /* 主內容 */
+        .content {
+            padding: 40px 20px;
+        }
+
+        section {
+            margin-bottom: 60px;
+            padding: 20px;
+            background: rgba(255, 250, 250, 0.8);
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        section h2 {
+            font-size: 2em;
+            color: #ff69b4;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        section p, ul {
+            font-size: 1.2em;
+            line-height: 1.8;
+            color: #444;
+            margin: 10px 0;
+        }
+
+        ul {
+            list-style: circle;
+            padding-left: 20px;
+        }
+
+        .image-wrapper {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .image-wrapper img {
+            width: 100%;
+            max-width: 300px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .image-wrapper img:hover {
+            transform: scale(1.1);
+            box-shadow: 0 10px 30px rgba(255, 105, 180, 0.5);
+        }
+
+        /* 影片樣式 */
+        .video {
+            text-align: center;
+        }
+
+        .video video {
+            width: 100%;
+            max-width: 800px;
+            border: 3px solid #ff69b4;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(255, 105, 180, 0.5);
+            transition: transform 0.3s ease;
+        }
+
+        .video video:hover {
+            transform: scale(1.05);
+        }
+
+        /* 底部 */
+        .footer {
+            text-align: center;
+            padding: 20px;
+            background: #ffe4e1;
+            border-top: 2px solid #ffc0cb;
+        }
+
+        .footer p {
+            font-size: 1em;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="background"></div>
+
+    <header class="hero">
+        <h1>有馬佳奈的專屬網頁</h1>
+        <p>展現她的魅力、故事與個性，讓我們一起愛上這位美少女！</p>
+    </header>
+
+    <main class="content">
+        <section>
+            <h2>角色簡介</h2>
+            <p>有馬佳奈是《我推的孩子》中一位極具魅力的角色，擁有無法忽視的個性與魅力。</p>
+            <div class="image-wrapper">
+                <img src="https://i.imgur.com/zT1JOCB.jpg" alt="有馬佳奈圖片">
+            </div>
+            <p>她在劇中展現了不凡的智慧與幽默感，成為眾多粉絲心中的亮點。</p>
+        </section>
+
+        <section>
+            <h2>佳奈的個人檔案</h2>
+            <ul>
+                <li><strong>名字：</strong>有馬佳奈</li>
+                <li><strong>職業：</strong>年輕的明星偶像</li>
+                <li><strong>特點：</strong>可愛、才華橫溢、堅強</li>
+                <li><strong>興趣：</strong>演戲、與粉絲互動</li>
+            </ul>
+            <div class="image-wrapper">
+                <img src="https://i.imgur.com/Kg8D1mj.jpg" alt="有馬佳奈可愛瞬間">
+            </div>
+        </section>
+
+        <section>
+            <h2>佳奈的優點</h2>
+            <ul>
+                <li>出色的演技，讓角色栩栩如生。</li>
+                <li>堅強的內心，即使面臨挑戰也能微笑面對。</li>
+                <li>對粉絲的真心付出，總是將大家的支持放在心上。</li>
+            </ul>
+            <div class="image-wrapper">
+                <img src="https://i.imgur.com/v5DyjHS.jpg" alt="佳奈的美麗姿態">
+            </div>
+        </section>
+
+        <section class="video">
+            <h2>經典片段</h2>
+            <video controls>
+                <source src="video.mp4" type="video/mp4">
+                您的瀏覽器不支援影片播放。
+            </video>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>© 2024 為佳奈傳遞更多愛的粉絲網頁。</p>
+    </footer>
+</body>
+</html>
