@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>角色專屬網頁</title>
+    <style>
+        /* 全局樣式 */
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            color: #fff;
+            background-color: #0f0f2f;
+            overflow-x: hidden;
+        }
+
+        .background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(120deg, #2a2a72, #009ffd);
+            z-index: -1;
+            animation: gradient 8s infinite alternate;
+        }
+
+        @keyframes gradient {
+            0% { background: linear-gradient(120deg, #2a2a72, #009ffd); }
+            100% { background: linear-gradient(120deg, #6a2a72, #4c9ffd); }
+        }
+
+        /* 星星特效 */
+        .background::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://cdn.pixabay.com/photo/2016/03/09/09/24/star-1247310_960_720.png') repeat;
+            opacity: 0.3;
+            animation: stars 50s linear infinite;
+        }
+
+        @keyframes stars {
+            0% { background-position: 0 0; }
+            100% { background-position: -2000px -2000px; }
+        }
+
+        /* 頭部區域 */
+        .hero {
+            text-align: center;
+            padding: 100px 20px;
+            background: rgba(0, 0, 0, 0.6);
+        }
+
+        .hero h1 {
+            font-size: 3em;
+            margin-bottom: 0.5em;
+            color: #ffd700;
+            text-shadow: 0 0 10px #ffd700;
+        }
+
+        .hero p {
+            font-size: 1.5em;
+            color: #fff;
+            text-shadow: 0 0 5px #fff;
+        }
+
+        /* 主內容 */
+        .content {
+            padding: 40px 20px;
+        }
+
+        .character-info, .gallery, .video {
+            margin-bottom: 40px;
+            text-align: center;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 0 15px rgba(255, 215, 0, 0.8);
+        }
+
+        .character-info h2, .gallery h2, .video h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            color: #ffd700;
+        }
+
+        .character-info p {
+            font-size: 1.2em;
+            line-height: 1.8;
+        }
+
+        .image-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .image-grid img {
+            width: 100%;
+            border: 3px solid #ffd700;
+            border-radius: 10px;
+            transition: transform 0.5s ease, box-shadow 0.5s ease;
+        }
+
+        .image-grid img:hover {
+            transform: scale(1.2) rotate(5deg);
+            box-shadow: 0 0 25px #ffd700;
+        }
+
+        .video video {
+            width: 100%;
+            max-width: 800px;
+            border: 3px solid #ffd700;
+            border-radius: 10px;
+            transition: transform 0.5s ease, box-shadow 0.5s ease;
+        }
+
+        .video video:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 20px #ffd700;
+        }
+
+        /* 滑鼠懸停背景亮光 */
+        body:hover {
+            cursor: url('sparkle.cur'), auto;
+        }
+
+        /* 底部 */
+        .footer {
+            text-align: center;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.6);
+        }
+
+        .footer p {
+            font-size: 1em;
+            color: #ffd700;
+        }
+    </style>
+</head>
+<body>
+    <div class="background"></div>
+
+    <header class="hero">
+        <h1>我的最愛角色：<span class="highlight">[角色名稱]</span></h1>
+        <p>魅力無窮，讓人沉浸其中的角色故事！</p>
+    </header>
+
+    <main class="content">
+        <section class="character-info">
+            <h2>角色介紹</h2>
+            <p>[角色名稱] 是 [故事名稱] 中的主要角色之一，以其[特點/能力]著稱。他/她在劇情中展現出[性格或能力的亮點]，讓人印象深刻。</p>
+            <p>在[關鍵場景]，他/她展現了 [令人讚嘆的表現或搞笑瞬間]。</p>
+        </section>
+
+        <section class="gallery">
+            <h2>角色圖片</h2>
+            <div class="image-grid">
+                <img src="image1.jpg" alt="角色圖1">
+                <img src="image2.jpg" alt="角色圖2">
+                <img src="image3.jpg" alt="角色圖3">
+            </div>
+        </section>
+
+        <section class="video">
+            <h2>經典片段</h2>
+            <video controls>
+                <source src="video.mp4" type="video/mp4">
+                您的瀏覽器不支援影片播放。
+            </video>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>© 2024 [您的名字] 為 [角色名稱] 傳遞更多愛。</p>
+    </footer>
+</body>
+</html>
