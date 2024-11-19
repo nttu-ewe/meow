@@ -167,6 +167,20 @@
             box-shadow: 0 10px 30px rgba(255, 105, 180, 0.5);
         }
 
+
+        .video video {
+            width: 100%;
+            max-width: 800px;
+            border: 3px solid #ff69b4;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(255, 105, 180, 0.5);
+            transition: transform 0.3s ease;
+        }
+
+        .video video:hover {
+            transform: scale(1.05);
+        }
+
         .video-container {
             display: flex;
             flex-wrap: wrap;
@@ -304,6 +318,32 @@
             <iframe width="560" height="315" src="https://www.youtube.com/embed/c7E-tgmFuzw?si=fEVN5_CuXHWn3ZXI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             <iframe width="560" height="315" src="https://www.youtube.com/embed/t-uWHWBAOhI?si=Yh8H7Zq4wthQRwDc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             <iframe width="560" height="315" src="https://www.youtube.com/embed/s9-RcVcxeAQ?si=y_OMuzwjvRwLcdlp" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <iframe 
+            src="https://youtu.be/t-uWHWBAOhI?si=Gsv1iqh6zIrrbiY9" 
+            allowfullscreen>
+        </iframe>
+        </section>
+
+        <section>
+            <h2>精彩影片</h2>
+            <div class="video">
+                <video controls>
+                    <source src="https://www.youtube.com/watch?v=Qd1t23dwQ0g" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <div class="video">
+                <video controls>
+                    <source src="https://www.youtube.com/watch?v=LtLZVbYrsu8" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <div class="video">
+                <video controls>
+                    <source src="https://www.youtube.com/watch?v=WpHg7D0JYZk" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
         </section>
         
     </main>
