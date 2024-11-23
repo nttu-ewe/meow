@@ -211,6 +211,63 @@
             border-radius: 5px;
         }
 
+
+
+article {
+  overflow: hidden;
+}
+
+article p {
+  margin: 10px;
+}
+
+a {
+  color: unset;
+  transition: 400ms transform ease;
+}
+
+input[type="checkbox"] {
+  position: absolute;
+  margin: 0;
+  width: 16px;
+  height: 16px;
+  right: 10px;
+  top: 10px;
+  z-index: 1;
+  opacity: 0;
+  cursor: pointer;
+}
+
+input[type="checkbox"]:checked ~ .portlet-header a {
+  transform: rotate(180deg);
+}
+input[type="checkbox"]:checked ~ .portlet-content {
+  grid-template-rows: 1fr;
+}
+
+.portlet {
+  position: relative;
+  border: 1px solid #0abab5;
+  border-radius: 8px;
+  max-width: 600px;
+  overflow: hidden;
+}
+
+.portlet-header {
+  background-color: #0abab5;
+  color: #fff;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.portlet-content {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: 400ms grid-template-rows ease;
+}
+
+
     </style>
 </head>
 <body>
@@ -296,6 +353,60 @@
                 <img src="4cdb67bff5c6266bcfa3d4f539c11343.jpg" alt="佳奈圖片12">
             </div>    
         </section>
+
+  <section>
+<div class="portlet">
+  <input type="checkbox" />
+  <div class="portlet-header">
+    <span>Portlet Header</span>
+    <a href="javascript:;"
+       ><i class="fa fa-chevron-down" aria-hidden="true"></i
+      ></a>
+  </div>
+  <div class="portlet-content">
+    <article>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo
+        repudiandae animi minus atque suscipit placeat voluptas nisi, illum
+        nesciunt quas expedita accusamus hic unde exercitationem nulla
+        neque. Nulla, tempora repellendus. Vero dignissimos consequuntur
+        quis, tenetur sit illum labore maiores quod, aliquam nam debitis
+        quaerat et earum temporibus architecto odio nemo odit id. Magnam ex
+        doloremque vero nam error voluptate eum. Blanditiis ipsa nobis
+        laborum voluptatem mollitia unde facilis repellendus rerum numquam,
+        autem, quasi minus amet. Reprehenderit maxime sint culpa aut amet
+        porro, veritatis aspernatur officia ad adipisci maiores reiciendis
+        quasi? Facilis tempora officiis eaque praesentium quasi, laboriosam
+        fugiat est dolor eveniet id soluta cupiditate vel, consequatur
+        repellat deleniti facere placeat, ipsam distinctio perspiciatis
+        aspernatur! Ipsam fuga minus soluta labore quas! Totam explicabo,
+        illo eum aspernatur omnis dicta dolore. Ipsa, optio mollitia eum
+        iure voluptates vitae deleniti cum nemo animi quaerat ipsum. Atque
+        nemo laboriosam reprehenderit. Voluptate perferendis repellat
+        eveniet facere? Asperiores porro fugiat praesentium nobis voluptate
+        quaerat nihil numquam similique labore, excepturi ipsa minus
+        repudiandae, provident aliquam? Nisi consequuntur exercitationem
+        aliquam? Sint libero dignissimos laudantium modi praesentium
+        exercitationem eveniet illo. Ullam reprehenderit quod est quis?
+        Expedita in, impedit perspiciatis doloribus quasi, eaque ad
+        asperiores maxime facilis voluptate rem ipsum odit reiciendis
+        molestiae itaque adipisci, harum facere at quo explicabo dolore!
+        Quas corporis iusto accusamus voluptatibus quidem eligendi,
+        dignissimos officia sed modi eum dolorem, aut, voluptas incidunt
+        mollitia quod quia delectus sit ab laboriosam saepe accusantium
+        voluptatem. Esse incidunt vero quos! Perferendis fugit nulla tempora
+        doloribus quos numquam, neque nisi, est delectus soluta recusandae
+        blanditiis iusto voluptatum fuga. Animi magnam aliquam inventore
+        ipsa esse cupiditate quo consequuntur! Magnam blanditiis sed
+        corporis! Id possimus, sunt suscipit ipsam assumenda libero error
+        dolorem ab recusandae! Ipsam vero ipsa doloribus molestiae voluptate
+        pariatur repellat esse, ad accusantium, odit, necessitatibus at
+        omnis consequuntur? Provident, fugit? Nulla.
+      </p>
+    </article>
+  </div>
+</div>
+ </section>
 
         <section>
             <h2>B小町歌曲</h2>
