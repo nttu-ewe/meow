@@ -247,56 +247,27 @@
             cursor: pointer;
         }
 
-        .btn::after {
+        .btn .btn1 .btn2 .btn3 .btn4 .btn5::after {
             content: "展開";
         }
 
-        .exp:checked + .text .btn::after {
+        .exp .btn1 .btn2 .btn3 .btn4 .btn5:checked + .text .btn::after {
             content: "收起";
         }
 
-        .exp{
+        .exp .btn1 .btn2 .btn3 .btn4 .btn5{
             display: none;
         }
 
-        .exp:checked + .text {
+        .exp .btn1 .btn2 .btn3 .btn4 .btn5:checked + .text {
             max-height: none;
         }
 
-        .exp:checked + .text::after {
+        .exp .btn1 .btn2 .btn3 .btn4 .btn5:checked + .text::after {
             visibility: hidden;
         }
 
-        .btn1 {
-            float: right;
-            clear: both;
-            height: 20px;
-            line-height: 18px;
-            margin-left: 20px;
-            position: relative;
-            color: #025cdc;
-            cursor: pointer;
-        }
-
-        .btn1::after {
-            content: "展開";
-        }
-
-        .exp1:checked + .text .btn1::after {
-            content: "收起";
-        }
-
-        .exp1 {
-            display: none;
-        }
-
-        .exp1:checked + .text {
-            max-height: none;
-        }
-
-        .exp1:checked + .text::after {
-            visibility: hidden;
-        }
+        
 
         .btn2 {
             float: right;
