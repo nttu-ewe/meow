@@ -294,223 +294,59 @@
             border-radius: 5px;
         }
 
+.wrap {
+    display: flex;
+    padding: 10px;
+}
 
-        .wrap {
-            display: flex;
-            padding: 10px;
-        }
+.text {
+    overflow: hidden;
+    line-height: 20px;
+    max-height: 60px;
+    text-align: justify;
+    position: relative;
+}
 
-        .text {
-            overflow: hidden;
-            line-height: 20px;
-            max-height: 60px;
-            text-align: justify;
-            position: relative;
-        }
+.text::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: #fff;
+}
 
-        .text::before {
-            content: "";
-            float: right;
-            width: 0;
-            /* height: calc(100% - 20px); */
-            height: 100%;
-            margin-bottom: -20px;
-        }
+.toggle-btn {
+    float: right;
+    clear: both;
+    height: 20px;
+    line-height: 18px;
+    margin-left: 20px;
+    position: relative;
+    color: #025cdc;
+    cursor: pointer;
+}
 
-        .text::after {
-            content: "";
-            width: 100%;
-            height: 100%;
-            position: absolute;
-            background: #fff;
-        }
+.toggle-btn::after {
+    content: "展開";
+}
 
-        .btn {
-            float: right;
-            clear: both;
-            height: 20px;
-            line-height: 18px;
-            margin-left: 20px;
-            position: relative;
-            color: #025cdc;
-            cursor: pointer;
-        }
+.exp:checked + .text .toggle-btn::after {
+    content: "收起";
+}
 
-        .btn::after {
-            content: "展開";
-        }
+.exp {
+    display: none;
+}
 
-        .exp:checked + .text .btn::after {
-            content: "收起";
-        }
+.exp:checked + .text {
+    max-height: none;
+}
 
-        .exp {
-            display: none;
-        }
-
-        .exp:checked + .text {
-            max-height: none;
-        }
-
-        .exp:checked + .text::after {
-            visibility: hidden;
-        }
+.exp:checked + .text::after {
+    visibility: hidden;
+}
 
         
-        .btn1 {
-            float: right;
-            clear: both;
-            height: 20px;
-            line-height: 18px;
-            margin-left: 20px;
-            position: relative;
-            color: #025cdc;
-            cursor: pointer;
-        }
-
-        .btn1::after {
-            content: "展開";
-        }
-
-        .exp1:checked + .text .btn1::after {
-            content: "收起";
-        }
-
-        .exp1 {
-            display: none;
-        }
-
-        .exp1:checked + .text {
-            max-height: none;
-        }
-
-        .exp1:checked + .text::after {
-            visibility: hidden;
-        }
-
-        .btn2 {
-            float: right;
-            clear: both;
-            height: 20px;
-            line-height: 18px;
-            margin-left: 20px;
-            position: relative;
-            color: #025cdc;
-            cursor: pointer;
-        }
-
-        .btn2::after {
-            content: "展開";
-        }
-
-        .exp2:checked + .text .btn2::after {
-            content: "收起";
-        }
-
-        .exp2 {
-            display: none;
-        }
-
-        .exp2:checked + .text {
-            max-height: none;
-        }
-
-        .exp2:checked + .text::after {
-            visibility: hidden;
-        }
-
-        .btn3 {
-            float: right;
-            clear: both;
-            height: 20px;
-            line-height: 18px;
-            margin-left: 20px;
-            position: relative;
-            color: #025cdc;
-            cursor: pointer;
-        }
-
-        .btn3::after {
-            content: "展開";
-        }
-
-        .exp3:checked + .text .btn3::after {
-            content: "收起";
-        }
-
-        .exp3 {
-            display: none;
-        }
-
-        .exp3:checked + .text {
-            max-height: none;
-        }
-
-        .exp3:checked + .text::after {
-            visibility: hidden;
-        }
-
-        .btn4 {
-            float: right;
-            clear: both;
-            height: 20px;
-            line-height: 18px;
-            margin-left: 20px;
-            position: relative;
-            color: #025cdc;
-            cursor: pointer;
-        }
-
-        .btn4::after {
-            content: "展開";
-        }
-
-        .exp4:checked + .text .btn4::after {
-            content: "收起";
-        }
-
-        .exp4 {
-            display: none;
-        }
-
-        .exp4:checked + .text {
-            max-height: none;
-        }
-
-        .exp4:checked + .text::after {
-            visibility: hidden;
-        }
-
-        .btn5 {
-            float: right;
-            clear: both;
-            height: 20px;
-            line-height: 18px;
-            margin-left: 20px;
-            position: relative;
-            color: #025cdc;
-            cursor: pointer;
-        }
-
-        .btn5::after {
-            content: "展開";
-        }
-
-        .exp5:checked + .text .btn5::after {
-            content: "收起";
-        }
-
-        .exp5 {
-            display: none;
-        }
-
-        .exp5:checked + .text {
-            max-height: none;
-        }
-
-        .exp5:checked + .text::after {
-            visibility: hidden;
-        }
 
     </style>
 </head>
@@ -622,6 +458,23 @@
                     <img src="劍儀.png" alt="佳奈圖片11">
                     <img src="4cdb67bff5c6266bcfa3d4f539c11343.jpg" alt="佳奈圖片12">
                 </div>
+                <div class="wrap">
+    <input type="checkbox" id="exp1" class="exp">
+    <div class="text">
+        <label class="toggle-btn" for="exp1"></label>
+        <h3>序章</h3>
+        <p>從小就被看做頗具演繹才能的少女...</p>
+    </div>
+</div>
+
+<div class="wrap">
+    <input type="checkbox" id="exp2" class="exp">
+    <div class="text">
+        <label class="toggle-btn" for="exp2"></label>
+        <h3>舞台劇篇</h3>
+        <p>公演上台前對黑川茜表示演技上的認同...</p>
+    </div>
+</div>
         </section>
 
         <section>
