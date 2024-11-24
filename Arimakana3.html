@@ -19,6 +19,51 @@
             box-sizing: border-box;
         }
 
+
+        @media (max-width: 768px) {
+    .role-song-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .role-song-container img {
+        max-width: 80%;
+        margin-bottom: 10px;
+    }
+}
+
+.role-song-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    gap: 20px;
+}
+
+.role-song-container img {
+    width: 200px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.role-song-container div {
+    flex: 1;
+}
+
+.role-song-container h3 {
+    margin: 0 0 10px 0;
+    font-size: 1.8em;
+    color: #FF3196;
+}
+
+.role-song-container p {
+    font-size: 1.2em;
+    line-height: 1.5;
+    color: #555;
+}
+
+
          @media (max-width: 1024px) {
             .hero {
                 flex-direction: column;
@@ -623,6 +668,34 @@
                     <p>演唱：有馬佳奈（配音：潘惠美）</p>
                 </div>
             
+        <section>
+    <h2>角色歌曲</h2>
+
+    <div class="role-song-container">
+        <a href="https://www.youtube.com/watch?v=06TuEbEVblU" target="_blank">
+            <img src="下載.jpg" alt="角色歌曲圖片1">
+        </a>
+        <div>
+            <h3>ピーマン體操</h3>
+            <p>作詞、作曲、編曲：Kijibato</p>
+            <p>演唱：有馬佳奈（配音：潘惠美）</p>
+        </div>
+    </div>
+
+    <div class="role-song-container">
+        <a href="https://www.youtube.com/watch?v=FFYaJybpX00&list=RDcT9F6N3Uc4M&index=3" target="_blank">
+            <img src="FB_IMG_1732387105909.jpg" alt="角色歌曲圖片2">
+        </a>
+        <div>
+            <h3>Full moon…!</h3>
+            <p>作詞、作曲：JunPayer</p>
+            <p>編曲：yamazo</p>
+            <p>演唱：有馬佳奈（配音：潘惠美）</p>
+        </div>
+    </div>
+</section>
+
+
         </section>
     </main>
 </body>
